@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HeliosWatch — Real-time solar storm risk analysis for Android. Monitor geomagnetic activity, Kp index, and space weather conditions from your phone." />
+  <meta name="theme-color" content="#ff8c1a" />
+  <title>HeliosWatch — Solar Storm Risk Monitor</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Star background layer -->
+  <div class="stars-bg" aria-hidden="true"></div>
+
+  <!-- ════════════════ HEADER / NAV ════════════════ -->
+  <header>
+    <nav>
+      <a href="#" class="logo" aria-label="HeliosWatch Home">
+        <div class="logo-icon" aria-hidden="true"></div>
+        Helios<span>Watch</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#risk">Risk Göstergesi</a></li>
+        <li><a href="#how-it-works">Nasıl Çalışır</a></li>
+        <li><a href="#download">İndir</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Güneş Aktivitesi İzleme Sistemi
+      </div>
+
+      <h1>
+        Güneş Fırtınası<br />
+        <span class="highlight">Risk Analizi</span>
+      </h1>
+
+      <p class="hero-sub">
+        HeliosWatch, jeomagnetik aktiviteyi gerçek zamanlı analiz ederek
+        bulunduğunuz konuma özgü güneş fırtınası risk değerlendirmesi sunar.
+      </p>
+
+      <div class="cta-group">
+        <a href="#download" class="btn btn-primary" id="hero-cta-download">
+          📱 APK İndir
+        </a>
+        <a href="#features" class="btn btn-secondary" id="hero-cta-features">
+          Keşfet →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ DOWNLOAD BANNER ════════════════ -->
+  <section id="download" class="container">
+    <div class="download-banner">
+      <div class="download-info">
+        <div class="apk-icon" aria-hidden="true">📦</div>
+        <div>
+          <h3>HeliosWatch Android APK</h3>
+          <p>Android cihazınıza doğrudan yükleyin</p>
+          <div class="download-meta">
+            <span class="meta-tag">Android 7.0+</span>
+            <span class="meta-tag">~ 6 MB</span>
+            <span class="meta-tag">v1.0 Debug</span>
+            <span class="meta-tag" id="live-kp" aria-live="polite">Kp —</span>
+          </div>
+        </div>
+      </div>
+      <a
+        id="apk-download-btn"
+        href="app-debug.apk"
+        download="HeliosWatch.apk"
+        class="btn-download"
+        data-track="download"
+        aria-label="HeliosWatch APK dosyasını indir"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+        </svg>
+        APK İndir
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════ STATS BAR ════════════════ -->
+  <div class="container">
+    <div class="stats-bar" role="list" aria-label="Uygulama istatistikleri">
+      <div class="stat-item" role="listitem">
+        <span class="stat-value" data-count="24" data-suffix="/7" id="stat-availability">—</span>
+        <span class="stat-label">Kesintisiz İzleme</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-value" data-count="5" data-suffix=" API" id="stat-apis">—</span>
+        <span class="stat-label">Veri Kaynağı</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-value" data-count="9" data-suffix=" Kp" id="stat-kp">—</span>
+        <span class="stat-label">Maksimum Ölçek</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-value" data-count="4" data-suffix=" Seviye" id="stat-levels">—</span>
+        <span class="stat-label">Risk Kategorisi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ FEATURES ════════════════ -->
+  <section id="features" class="section">
+    <div class="container">
+      <p class="section-label">Özellikler</p>
+      <h2 class="section-title">Uzay Hava Durumunu<br />Elinizin Altında Tutun</h2>
+      <p class="section-desc">
+        NASA, NOAA ve ESA veri kaynaklarını birleştirerek size doğru ve
+        güncel jeomagnetik risk bilgisi sunar.
+      </p>
+
+      <div class="features-grid">
+
+        <article class="feature-card" aria-labelledby="feat1-title">
+          <span class="feature-icon" aria-hidden="true">🌍</span>
+          <h3 id="feat1-title">Konuma Özel Analiz</h3>
+          <p>GPS entegrasyonu ile bulunduğunuz enlem/boylama göre kişiselleştirilmiş risk hesaplaması yapılır.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="feat2-title">
+          <span class="feature-icon" aria-hidden="true">⚡</span>
+          <h3 id="feat2-title">Gerçek Zamanlı Kp İndeksi</h3>
+          <p>Jeomagnetik aktivitenin evrensel ölçütü olan Kp indeksi canlı olarak izlenir ve görselleştirilir.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="feat3-title">
+          <span class="feature-icon" aria-hidden="true">🔔</span>
+          <h3 id="feat3-title">Akıllı Uyarı Sistemi</h3>
+          <p>Risk seviyesi yükseldiğinde anında bildirim alın; kritik eşikler özelleştirilebilir.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="feat4-title">
+          <span class="feature-icon" aria-hidden="true">📊</span>
+          <h3 id="feat4-title">Detaylı Raporlama</h3>
+          <p>Geçmiş fırtına verileri, dalga boyu grafikleri ve tahmin modelleri tek ekranda.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="feat5-title">
+          <span class="feature-icon" aria-hidden="true">🛡️</span>
+          <h3 id="feat5-title">Koruma Tavsiyeleri</h3>
+          <p>Risk düzeyine göre elektronik cihaz kullanımı ve uçuş güvenliği hakkında pratik öneriler.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="feat6-title">
+          <span class="feature-icon" aria-hidden="true">🌅</span>
+          <h3 id="feat6-title">Kuzey Işıkları Tahmini</h3>
+          <p>Yüksek Kp değerlerinde Aurora borealis görülebilecek bölge ve zamanları tahmin edin.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ RISK SIMULATOR ════════════════ -->
+  <section id="risk" class="risk-section">
+    <div class="container">
+      <p class="section-label">Risk Göstergesi</p>
+      <h2 class="section-title">Canlı Risk Seviyesi</h2>
+      <p class="section-desc">Uygulamanın risk göstergesini aşağıdan simüle edebilirsiniz.</p>
+
+      <div class="risk-demo" aria-label="Risk seviyesi simülatörü">
+        <p class="risk-title">JEOMAGNETİK AKTİVİTE — CANLI</p>
+
+        <div class="risk-gauge" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Risk göstergesi">
+          <div class="risk-fill" id="risk-fill"></div>
+        </div>
+
+        <div class="risk-labels" aria-hidden="true">
+          <span>Düşük</span>
+          <span>Orta</span>
+          <span>Yüksek</span>
+          <span>Ekstrem</span>
+        </div>
+
+        <div class="risk-level-display">
+          <span class="risk-level-label" id="risk-level-label">—</span>
+          <p class="risk-level-desc" id="risk-level-desc">Yükleniyor…</p>
+        </div>
+
+        <div class="risk-sim-btns" role="group" aria-label="Risk seviyesi seç">
+          <button class="risk-btn" data-level="low"      id="btn-low">Düşük</button>
+          <button class="risk-btn" data-level="moderate" id="btn-moderate">Orta</button>
+          <button class="risk-btn" data-level="high"     id="btn-high">Yüksek</button>
+          <button class="risk-btn" data-level="extreme"  id="btn-extreme">Ekstrem</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ HOW IT WORKS ════════════════ -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <p class="section-label">Nasıl Çalışır</p>
+      <h2 class="section-title">Üç Adımda<br />Güneş Fırtınası Takibi</h2>
+
+      <div class="steps" aria-label="Kullanım adımları">
+
+        <div class="step">
+          <div class="step-num" aria-hidden="true">01</div>
+          <div class="step-content">
+            <h3>Uygulamayı İndirin ve Başlatın</h3>
+            <p>APK'yı indirin, cihazınıza kurun ve izin onayı verin. Konum erişimi ile çok daha doğru risk analizi alırsınız.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num" aria-hidden="true">02</div>
+          <div class="step-content">
+            <h3>Veri Otomatik Güncellenir</h3>
+            <p>Uygulama arka planda NOAA ve NASA verilerini düzenli aralıklarla çekerek Kp indeksini günceller.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num" aria-hidden="true">03</div>
+          <div class="step-content">
+            <h3>Risk Uyarısı Alın</h3>
+            <p>Jeomagnetik aktivite yükseldiğinde bildirim alın ve önerilen koruma önlemlerine göz atın.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ APP PREVIEW ════════════════ -->
+  <section class="preview-section">
+    <div class="container">
+      <p class="section-label">Uygulama Önizlemesi</p>
+      <h2 class="section-title">Sade ve Güçlü<br />Arayüz</h2>
+
+      <div class="app-preview" aria-label="Uygulama ekran görselleri">
+
+        <div class="preview-frame">
+          <div class="preview-bar">
+            <div class="preview-dot" style="background:#ef4444"></div>
+            <div class="preview-dot" style="background:#facc15"></div>
+            <div class="preview-dot" style="background:#22c55e"></div>
+            <span style="margin-left:8px">Ana Ekran</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-line accent"></div>
+            <div class="preview-line medium"></div>
+            <div class="preview-line short"></div>
+            <div class="preview-line medium"></div>
+            <div class="preview-line accent" style="width:55%"></div>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <div class="preview-bar">
+            <div class="preview-dot" style="background:#ef4444"></div>
+            <div class="preview-dot" style="background:#facc15"></div>
+            <div class="preview-dot" style="background:#22c55e"></div>
+            <span style="margin-left:8px">Risk Detayı</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-line short"></div>
+            <div class="preview-line" style="width:90%;background:linear-gradient(90deg,rgba(239,68,68,0.5),rgba(255,140,26,0.3));height:14px;border-radius:50px;"></div>
+            <div class="preview-line medium"></div>
+            <div class="preview-line short"></div>
+            <div class="preview-line medium"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer>
+    <a href="#" class="logo">
+      <div class="logo-icon"></div>
+      Helios<span>Watch</span>
+    </a>
+    <p>Güneş fırtınası risk analizi · Android uygulaması</p>
+    <p style="margin-top:6px">
+      Veriler: <a href="https://www.swpc.noaa.gov/" target="_blank" rel="noopener">NOAA SWPC</a> ·
+      <a href="https://www.nasa.gov/heliophysics/" target="_blank" rel="noopener">NASA Heliophysics</a>
+    </p>
+    <p style="margin-top:14px;font-size:0.78rem;opacity:0.5;">
+      © 2026 HeliosWatch. Tüm hakları saklıdır.
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
